@@ -1,3 +1,4 @@
+
 /* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
@@ -6,8 +7,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
 }
+
 /* General styles */
 body {
     min-height: 100vh;
@@ -26,16 +27,14 @@ header {
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
-    display: flex; 
+    display: flex;
     justify-content: space-between;
     align-items: baseline;
-
 }
 
 header a {
     text-decoration: none;
     color: inherit;
-
 }
 
 h1 {
@@ -46,9 +45,10 @@ h1 {
 }
 
 #menu {
-    list-style-type: none;
+ 
     font-size: 110%;
     letter-spacing: 4px;
+    list-style-type: none;
 }
 
 #menu > li {
@@ -69,7 +69,6 @@ nav {
     box-shadow: 0 2px 2px #3a3a3a;
     display: none;
     top: 100%;
-
 }
 
 /* Nav toggle */
@@ -90,10 +89,34 @@ main {
     background-color: lightblue;
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
-    margin-top: 47px;
+    margin-top: 60px;
 }
 
 /* Footer */
 footer {
     background-color: orange;
+}
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+    /* Header */
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #menu > li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
 }
